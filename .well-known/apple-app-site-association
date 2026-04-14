@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "SAMH2SG2SF.com.chrguy.kiplou",
+        "paths": ["/share/*"]
+      }
+    ]
+  }
+}
