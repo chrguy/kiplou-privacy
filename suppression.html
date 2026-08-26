@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiplou — Suppression de vos données</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap');
+
+  :root {
+    --teal: #0d6e6e;
+    --teal-light: #e8f4f4;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --bg: #fafafa;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  header {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .logo-icon {
+    width: 48px; height: 48px;
+    background: var(--teal);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 22px;
+  }
+
+  .logo-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    color: var(--teal);
+  }
+
+  .lang-nav {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .lang-btn {
+    padding: 6px 16px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: white;
+    color: var(--muted);
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    transition: all 0.15s;
+  }
+
+  .lang-btn.active, .lang-btn:hover {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: white;
+  }
+
+  main {
+    max-width: 720px;
+    margin: 48px auto;
+    padding: 0 24px 80px;
+  }
+
+  .section {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    color: var(--teal);
+    margin-bottom: 6px;
+  }
+
+  .date {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+  }
+
+  p { color: #374151; margin-bottom: 10px; font-size: 15px; }
+  p:last-child { margin-bottom: 0; }
+
+  .badge {
+    display: inline-block;
+    background: var(--teal-light);
+    color: var(--teal);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  .content { display: none; }
+  .content.active { display: block; }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 32px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">🛒</div>
+    <span class="logo-name">Kiplou</span>
+  </div>
+  <div class="lang-nav">
+    <button class="lang-btn active" onclick="setLang('fr')">Français</button>
+    <button class="lang-btn" onclick="setLang('en')">English</button>
+    <button class="lang-btn" onclick="setLang('es')">Español</button>
+    <button class="lang-btn" onclick="setLang('it')">Italiano</button>
+    <button class="lang-btn" onclick="setLang('pt')">Português</button>
+    <button class="lang-btn" onclick="setLang('de')">Deutsch</button>
+  </div>
+</header>
+
+<main>
+
+<!-- FRANÇAIS -->
+<div class="content active" id="lang-fr">
+  <div class="section">
+    <h1>Suppression de vos données</h1>
+    <p class="date">Dernière mise à jour : août 2026</p>
+  </div>
+  <div class="section">
+    <span class="badge">🗑️ Suppression immédiate, depuis l'application</span>
+    <h2>Cette page concerne l'application Kiplou</h2>
+    <p>Kiplou est une application de listes de courses. Elle fonctionne <strong>sans compte et sans inscription</strong>. Cette page explique comment supprimer les données associées à votre utilisation de Kiplou, ce qui est effacé et ce qui peut subsister.</p>
+  </div>
+  <div class="section">
+    <h2>Ce que Kiplou conserve, et où</h2>
+    <p>La quasi-totalité de vos données — listes, articles, magasins, prix, recettes — reste sur votre appareil et n'est jamais transmise. Deux cas seulement donnent lieu à un stockage sur serveur : une <strong>liste que vous partagez</strong> avec quelqu'un, et une <strong>recette que vous publiez</strong> dans la communauté.</p>
+  </div>
+  <div class="section">
+    <h2>Supprimer une liste partagée</h2>
+    <p>Ouvrez Kiplou, allez dans l'onglet <strong>Listes</strong>, <strong>balayez la liste vers la gauche</strong>, puis confirmez la suppression. Si vous êtes le propriétaire de la liste, le partage est arrêté et son contenu est retiré du serveur pour tous les participants. Si vous aviez été invité, vous quittez la liste et votre identifiant n'y figure plus. L'effacement est immédiat.</p>
+  </div>
+  <div class="section">
+    <h2>Retirer une recette publiée</h2>
+    <p>Ouvrez l'onglet <strong>Recettes</strong>, section <strong>Communauté</strong>, affichez la recette que vous avez publiée et choisissez <strong>Retirer</strong>. Elle disparaît aussitôt pour tous les utilisateurs.</p>
+  </div>
+  <div class="section">
+    <h2>Effacer les données restées sur l'appareil</h2>
+    <p>Désinstallez l'application : toutes les données qu'elle conservait localement sont effacées avec elle. Cette opération est définitive et ne peut pas être annulée.</p>
+  </div>
+  <div class="section">
+    <h2>Demander la suppression par e-mail</h2>
+    <p>Si vous n'avez plus accès à l'application, écrivez à <strong>contact@kiplou.app</strong>. Kiplou ne gérant aucun compte, indiquez le nom de la liste concernée ou son code d'invitation, afin que nous puissions l'identifier. Votre demande est traitée dans un délai de 30 jours.</p>
+  </div>
+  <div class="section">
+    <h2>Ce qui est supprimé</h2>
+    <p>Le contenu de la liste partagée : son nom, les articles, les quantités, les unités et l'état coché de chaque ligne, ainsi que l'identifiant anonyme associé aux lignes que vous aviez ajoutées. Pour une recette : son texte, ses ingrédients et le lien vers votre identifiant anonyme.</p>
+  </div>
+  <div class="section">
+    <h2>Ce qui peut subsister</h2>
+    <p>Les sauvegardes techniques de l'hébergeur peuvent contenir une copie résiduelle pendant une courte période avant d'être écrasées ; elle n'est accessible ni depuis l'application, ni par les autres utilisateurs. Un signalement émis au sujet d'un contenu publié peut être conservé à des fins de modération. Les données restées sur les appareils des autres participants d'une liste, une fois exportées ou recopiées par eux, ne sont plus sous notre contrôle.</p>
+  </div>
+  <div class="section">
+    <h2>Contact</h2>
+    <p>Pour toute question : <strong>contact@kiplou.app</strong> — voir aussi notre <a href="./">politique de confidentialité</a>.</p>
+  </div>
+</div>
+
+<!-- ENGLISH -->
+<div class="content" id="lang-en">
+  <div class="section">
+    <h1>Deleting your data</h1>
+    <p class="date">Last updated: August 2026</p>
+  </div>
+  <div class="section">
+    <span class="badge">🗑️ Immediate deletion, from within the app</span>
+    <h2>This page concerns the Kiplou app</h2>
+    <p>Kiplou is a shopping list app. It works <strong>without an account and without signing up</strong>. This page explains how to delete the data linked to your use of Kiplou, what gets erased and what may remain.</p>
+  </div>
+  <div class="section">
+    <h2>What Kiplou keeps, and where</h2>
+    <p>Almost all of your data — lists, items, stores, prices, recipes — stays on your device and is never transmitted. Only two cases involve storage on a server: a <strong>list you share</strong> with someone, and a <strong>recipe you publish</strong> to the community.</p>
+  </div>
+  <div class="section">
+    <h2>Deleting a shared list</h2>
+    <p>Open Kiplou, go to the <strong>Lists</strong> tab, <strong>swipe the list to the left</strong>, then confirm the deletion. If you own the list, sharing stops and its contents are removed from the server for every participant. If you had been invited, you leave the list and your identifier no longer appears in it. Erasure is immediate.</p>
+  </div>
+  <div class="section">
+    <h2>Withdrawing a published recipe</h2>
+    <p>Open the <strong>Recipes</strong> tab, <strong>Community</strong> section, display the recipe you published and choose <strong>Withdraw</strong>. It disappears at once for all users.</p>
+  </div>
+  <div class="section">
+    <h2>Erasing the data left on your device</h2>
+    <p>Uninstall the app: all the data it kept locally is erased with it. This is permanent and cannot be undone.</p>
+  </div>
+  <div class="section">
+    <h2>Requesting deletion by email</h2>
+    <p>If you no longer have access to the app, write to <strong>contact@kiplou.app</strong>. As Kiplou has no accounts, please state the name of the list concerned or its invitation code so that we can identify it. Your request is handled within 30 days.</p>
+  </div>
+  <div class="section">
+    <h2>What is deleted</h2>
+    <p>The contents of the shared list: its name, the items, quantities, units and ticked state of each line, together with the anonymous identifier attached to the lines you had added. For a recipe: its text, its ingredients and the link to your anonymous identifier.</p>
+  </div>
+  <div class="section">
+    <h2>What may remain</h2>
+    <p>The hosting provider's technical backups may hold a residual copy for a short period before being overwritten; it is accessible neither from the app nor by other users. A report submitted about published content may be kept for moderation purposes. Data left on the devices of a list's other participants, once exported or copied by them, is no longer under our control.</p>
+  </div>
+  <div class="section">
+    <h2>Contact</h2>
+    <p>For any question: <strong>contact@kiplou.app</strong> — see also our <a href="./">privacy policy</a>.</p>
+  </div>
+</div>
+
+<!-- ESPAÑOL -->
+<div class="content" id="lang-es">
+  <div class="section">
+    <h1>Eliminación de tus datos</h1>
+    <p class="date">Última actualización: agosto de 2026</p>
+  </div>
+  <div class="section">
+    <span class="badge">🗑️ Eliminación inmediata, desde la aplicación</span>
+    <h2>Esta página se refiere a la aplicación Kiplou</h2>
+    <p>Kiplou es una aplicación de listas de la compra. Funciona <strong>sin cuenta y sin registro</strong>. Esta página explica cómo eliminar los datos asociados a tu uso de Kiplou, qué se borra y qué puede permanecer.</p>
+  </div>
+  <div class="section">
+    <h2>Qué conserva Kiplou, y dónde</h2>
+    <p>Casi todos tus datos — listas, artículos, tiendas, precios, recetas — permanecen en tu dispositivo y nunca se transmiten. Solo dos casos implican almacenamiento en un servidor: una <strong>lista que compartes</strong> con alguien y una <strong>receta que publicas</strong> en la comunidad.</p>
+  </div>
+  <div class="section">
+    <h2>Eliminar una lista compartida</h2>
+    <p>Abre Kiplou, ve a la pestaña <strong>Listas</strong>, <strong>desliza la lista hacia la izquierda</strong> y confirma la eliminación. Si eres el propietario, la compartición se detiene y su contenido se retira del servidor para todos los participantes. Si te habían invitado, abandonas la lista y tu identificador deja de figurar en ella. El borrado es inmediato.</p>
+  </div>
+  <div class="section">
+    <h2>Retirar una receta publicada</h2>
+    <p>Abre la pestaña <strong>Recetas</strong>, sección <strong>Comunidad</strong>, muestra la receta que publicaste y elige <strong>Retirar</strong>. Desaparece de inmediato para todos los usuarios.</p>
+  </div>
+  <div class="section">
+    <h2>Borrar los datos que quedan en el dispositivo</h2>
+    <p>Desinstala la aplicación: todos los datos que guardaba localmente se borran con ella. Esta operación es definitiva y no se puede deshacer.</p>
+  </div>
+  <div class="section">
+    <h2>Solicitar la eliminación por correo</h2>
+    <p>Si ya no tienes acceso a la aplicación, escribe a <strong>contact@kiplou.app</strong>. Como Kiplou no gestiona cuentas, indica el nombre de la lista en cuestión o su código de invitación para que podamos identificarla. Tu solicitud se atiende en un plazo de 30 días.</p>
+  </div>
+  <div class="section">
+    <h2>Qué se elimina</h2>
+    <p>El contenido de la lista compartida: su nombre, los artículos, las cantidades, las unidades y el estado marcado de cada línea, así como el identificador anónimo asociado a las líneas que habías añadido. En el caso de una receta: su texto, sus ingredientes y el vínculo con tu identificador anónimo.</p>
+  </div>
+  <div class="section">
+    <h2>Qué puede permanecer</h2>
+    <p>Las copias de seguridad técnicas del proveedor de alojamiento pueden contener una copia residual durante un breve período antes de sobrescribirse; no es accesible ni desde la aplicación ni por otros usuarios. Una denuncia presentada sobre un contenido publicado puede conservarse con fines de moderación. Los datos que queden en los dispositivos de los demás participantes de una lista, una vez exportados o copiados por ellos, ya no están bajo nuestro control.</p>
+  </div>
+  <div class="section">
+    <h2>Contacto</h2>
+    <p>Para cualquier consulta: <strong>contact@kiplou.app</strong> — consulta también nuestra <a href="./">política de privacidad</a>.</p>
+  </div>
+</div>
+
+<!-- ITALIANO -->
+<div class="content" id="lang-it">
+  <div class="section">
+    <h1>Eliminazione dei tuoi dati</h1>
+    <p class="date">Ultimo aggiornamento: agosto 2026</p>
+  </div>
+  <div class="section">
+    <span class="badge">🗑️ Eliminazione immediata, dall'app</span>
+    <h2>Questa pagina riguarda l'app Kiplou</h2>
+    <p>Kiplou è un'app per le liste della spesa. Funziona <strong>senza account e senza registrazione</strong>. Questa pagina spiega come eliminare i dati legati al tuo utilizzo di Kiplou, che cosa viene cancellato e che cosa può rimanere.</p>
+  </div>
+  <div class="section">
+    <h2>Che cosa conserva Kiplou, e dove</h2>
+    <p>Quasi tutti i tuoi dati — liste, articoli, negozi, prezzi, ricette — restano sul tuo dispositivo e non vengono mai trasmessi. Solo due casi comportano un salvataggio su server: una <strong>lista che condividi</strong> con qualcuno e una <strong>ricetta che pubblichi</strong> nella comunità.</p>
+  </div>
+  <div class="section">
+    <h2>Eliminare una lista condivisa</h2>
+    <p>Apri Kiplou, vai alla scheda <strong>Liste</strong>, <strong>scorri la lista verso sinistra</strong> e conferma l'eliminazione. Se sei il proprietario, la condivisione si interrompe e il contenuto viene rimosso dal server per tutti i partecipanti. Se eri stato invitato, esci dalla lista e il tuo identificativo non vi compare più. La cancellazione è immediata.</p>
+  </div>
+  <div class="section">
+    <h2>Ritirare una ricetta pubblicata</h2>
+    <p>Apri la scheda <strong>Ricette</strong>, sezione <strong>Comunità</strong>, visualizza la ricetta che hai pubblicato e scegli <strong>Ritira</strong>. Scompare subito per tutti gli utenti.</p>
+  </div>
+  <div class="section">
+    <h2>Cancellare i dati rimasti sul dispositivo</h2>
+    <p>Disinstalla l'app: tutti i dati che conservava localmente vengono cancellati con essa. L'operazione è definitiva e non può essere annullata.</p>
+  </div>
+  <div class="section">
+    <h2>Richiedere l'eliminazione via e-mail</h2>
+    <p>Se non hai più accesso all'app, scrivi a <strong>contact@kiplou.app</strong>. Poiché Kiplou non gestisce account, indica il nome della lista interessata o il suo codice di invito, così da poterla identificare. La tua richiesta viene trattata entro 30 giorni.</p>
+  </div>
+  <div class="section">
+    <h2>Che cosa viene eliminato</h2>
+    <p>Il contenuto della lista condivisa: il nome, gli articoli, le quantità, le unità e lo stato spuntato di ogni riga, insieme all'identificativo anonimo associato alle righe che avevi aggiunto. Per una ricetta: il testo, gli ingredienti e il collegamento al tuo identificativo anonimo.</p>
+  </div>
+  <div class="section">
+    <h2>Che cosa può rimanere</h2>
+    <p>I backup tecnici del fornitore di hosting possono contenere una copia residua per un breve periodo prima di essere sovrascritti; non è accessibile né dall'app né dagli altri utenti. Una segnalazione inviata su un contenuto pubblicato può essere conservata a fini di moderazione. I dati rimasti sui dispositivi degli altri partecipanti a una lista, una volta esportati o copiati da loro, non sono più sotto il nostro controllo.</p>
+  </div>
+  <div class="section">
+    <h2>Contatti</h2>
+    <p>Per qualsiasi domanda: <strong>contact@kiplou.app</strong> — vedi anche la nostra <a href="./">informativa sulla privacy</a>.</p>
+  </div>
+</div>
+
+<!-- PORTUGUÊS -->
+<div class="content" id="lang-pt">
+  <div class="section">
+    <h1>Eliminação dos seus dados</h1>
+    <p class="date">Última atualização: agosto de 2026</p>
+  </div>
+  <div class="section">
+    <span class="badge">🗑️ Eliminação imediata, a partir da aplicação</span>
+    <h2>Esta página diz respeito à aplicação Kiplou</h2>
+    <p>O Kiplou é uma aplicação de listas de compras. Funciona <strong>sem conta e sem registo</strong>. Esta página explica como eliminar os dados associados à sua utilização do Kiplou, o que é apagado e o que pode permanecer.</p>
+  </div>
+  <div class="section">
+    <h2>O que o Kiplou conserva, e onde</h2>
+    <p>Quase todos os seus dados — listas, artigos, lojas, preços, receitas — permanecem no seu dispositivo e nunca são transmitidos. Apenas dois casos implicam armazenamento num servidor: uma <strong>lista que partilha</strong> com alguém e uma <strong>receita que publica</strong> na comunidade.</p>
+  </div>
+  <div class="section">
+    <h2>Eliminar uma lista partilhada</h2>
+    <p>Abra o Kiplou, vá ao separador <strong>Listas</strong>, <strong>deslize a lista para a esquerda</strong> e confirme a eliminação. Se for o proprietário, a partilha é interrompida e o conteúdo é retirado do servidor para todos os participantes. Se tinha sido convidado, sai da lista e o seu identificador deixa de constar nela. A eliminação é imediata.</p>
+  </div>
+  <div class="section">
+    <h2>Retirar uma receita publicada</h2>
+    <p>Abra o separador <strong>Receitas</strong>, secção <strong>Comunidade</strong>, mostre a receita que publicou e escolha <strong>Retirar</strong>. Desaparece de imediato para todos os utilizadores.</p>
+  </div>
+  <div class="section">
+    <h2>Apagar os dados que ficaram no dispositivo</h2>
+    <p>Desinstale a aplicação: todos os dados que guardava localmente são apagados com ela. Esta operação é definitiva e não pode ser anulada.</p>
+  </div>
+  <div class="section">
+    <h2>Pedir a eliminação por e-mail</h2>
+    <p>Se já não tiver acesso à aplicação, escreva para <strong>contact@kiplou.app</strong>. Uma vez que o Kiplou não gere contas, indique o nome da lista em causa ou o respetivo código de convite, para que a possamos identificar. O seu pedido é tratado no prazo de 30 dias.</p>
+  </div>
+  <div class="section">
+    <h2>O que é eliminado</h2>
+    <p>O conteúdo da lista partilhada: o nome, os artigos, as quantidades, as unidades e o estado assinalado de cada linha, bem como o identificador anónimo associado às linhas que tinha acrescentado. No caso de uma receita: o texto, os ingredientes e a ligação ao seu identificador anónimo.</p>
+  </div>
+  <div class="section">
+    <h2>O que pode permanecer</h2>
+    <p>As cópias de segurança técnicas do fornecedor de alojamento podem conter uma cópia residual durante um curto período antes de serem substituídas; não é acessível nem a partir da aplicação nem pelos outros utilizadores. Uma denúncia apresentada sobre um conteúdo publicado pode ser conservada para fins de moderação. Os dados que fiquem nos dispositivos dos outros participantes de uma lista, depois de exportados ou copiados por eles, deixam de estar sob o nosso controlo.</p>
+  </div>
+  <div class="section">
+    <h2>Contacto</h2>
+    <p>Para qualquer questão: <strong>contact@kiplou.app</strong> — consulte também a nossa <a href="./">política de privacidade</a>.</p>
+  </div>
+</div>
+
+<!-- DEUTSCH -->
+<div class="content" id="lang-de">
+  <div class="section">
+    <h1>Löschung Ihrer Daten</h1>
+    <p class="date">Zuletzt aktualisiert: August 2026</p>
+  </div>
+  <div class="section">
+    <span class="badge">🗑️ Sofortige Löschung, direkt in der App</span>
+    <h2>Diese Seite betrifft die App Kiplou</h2>
+    <p>Kiplou ist eine App für Einkaufslisten. Sie funktioniert <strong>ohne Konto und ohne Registrierung</strong>. Diese Seite erklärt, wie Sie die mit Ihrer Nutzung von Kiplou verbundenen Daten löschen, was dabei gelöscht wird und was bestehen bleiben kann.</p>
+  </div>
+  <div class="section">
+    <h2>Was Kiplou speichert, und wo</h2>
+    <p>Nahezu alle Ihre Daten — Listen, Artikel, Geschäfte, Preise, Rezepte — bleiben auf Ihrem Gerät und werden nie übertragen. Nur zwei Fälle führen zu einer Speicherung auf einem Server: eine <strong>Liste, die Sie teilen</strong>, und ein <strong>Rezept, das Sie veröffentlichen</strong>.</p>
+  </div>
+  <div class="section">
+    <h2>Eine geteilte Liste löschen</h2>
+    <p>Öffnen Sie Kiplou, gehen Sie zum Tab <strong>Listen</strong>, <strong>wischen Sie die Liste nach links</strong> und bestätigen Sie das Löschen. Sind Sie Eigentümerin oder Eigentümer der Liste, wird das Teilen beendet und ihr Inhalt für alle Teilnehmenden vom Server entfernt. Waren Sie eingeladen, verlassen Sie die Liste und Ihre Kennung erscheint dort nicht mehr. Die Löschung erfolgt sofort.</p>
+  </div>
+  <div class="section">
+    <h2>Ein veröffentlichtes Rezept zurückziehen</h2>
+    <p>Öffnen Sie den Tab <strong>Rezepte</strong>, Bereich <strong>Community</strong>, rufen Sie Ihr veröffentlichtes Rezept auf und wählen Sie <strong>Zurückziehen</strong>. Es verschwindet sofort für alle Nutzerinnen und Nutzer.</p>
+  </div>
+  <div class="section">
+    <h2>Die auf dem Gerät verbliebenen Daten löschen</h2>
+    <p>Deinstallieren Sie die App: alle lokal gespeicherten Daten werden mit ihr gelöscht. Dieser Vorgang ist endgültig und kann nicht rückgängig gemacht werden.</p>
+  </div>
+  <div class="section">
+    <h2>Löschung per E-Mail beantragen</h2>
+    <p>Wenn Sie keinen Zugriff mehr auf die App haben, schreiben Sie an <strong>contact@kiplou.app</strong>. Da Kiplou keine Konten führt, geben Sie bitte den Namen der betreffenden Liste oder deren Einladungscode an, damit wir sie zuordnen können. Ihre Anfrage wird innerhalb von 30 Tagen bearbeitet.</p>
+  </div>
+  <div class="section">
+    <h2>Was gelöscht wird</h2>
+    <p>Der Inhalt der geteilten Liste: ihr Name, die Artikel, Mengen, Einheiten und der Abhak-Status jeder Zeile sowie die anonyme Kennung, die den von Ihnen hinzugefügten Zeilen zugeordnet war. Bei einem Rezept: sein Text, seine Zutaten und die Verknüpfung mit Ihrer anonymen Kennung.</p>
+  </div>
+  <div class="section">
+    <h2>Was bestehen bleiben kann</h2>
+    <p>Die technischen Sicherungskopien des Hosting-Anbieters können für kurze Zeit eine Restkopie enthalten, bevor sie überschrieben werden; sie ist weder über die App noch für andere Nutzende zugänglich. Eine Meldung zu einem veröffentlichten Inhalt kann zu Moderationszwecken aufbewahrt werden. Daten, die auf den Geräten der übrigen Teilnehmenden einer Liste verbleiben, entziehen sich unserer Kontrolle, sobald diese sie exportiert oder kopiert haben.</p>
+  </div>
+  <div class="section">
+    <h2>Kontakt</h2>
+    <p>Bei Fragen: <strong>contact@kiplou.app</strong> — siehe auch unsere <a href="./">Datenschutzerklärung</a>.</p>
+  </div>
+</div>
+
+</main>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('lang-' + lang).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
